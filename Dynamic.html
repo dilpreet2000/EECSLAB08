@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cristiano Ronaldo</title>      
+        <style>
+          #description {
+            border: thick solid rgb(252, 252, 255);
+          }
+        </style>
+    </head>
+    <body>
+        
+        <div id="description"> Cristiano Ronaldo dos Santos Aveiro, born on February 5th, 1985 and commonly known as Cristiano Ronaldo, is a Portuguese footballer who plays as a forward for Spanish club Real Madrid and serves as captain of the Portuguese national team. Ronaldo currently holds the distinction of being the most expensive player in football history after having transferred to Real Madrid from Manchester United in a deal worth £80 million (€94m, US$132m). His contract with Real Madrid is believed to have made him the highest-paid football player in the world.</div>
+        <br>
+
+        <label for="Border">Border</label>
+        <input id = "x" list="Border" />
+        <datalist id="Border">
+            <option>Red</option>
+            <option>Green</option>
+            <option>Blue</option>
+            <option>White</option>
+        </datalist>
+
+        <label for="Background">Background</label>
+        <input id="y" list="Background" />
+        <datalist id="Background">
+            <option>Red</option>
+            <option>Green</option>
+            <option>Blue</option>
+            <option>White</option>
+        </datalist>
+
+        <button type="button" onclick="changeStyle()">Click Me</button>  
+      <script>
+        function changeStyle(){
+            var element = document.getElementById("description");
+            var x = document.getElementById("x").value
+            if(x=="Red")
+                element.style.borderColor = "#FF0000";
+            else if(x=="Green")
+                element.style.borderColor = "#008000";
+            else if(x=="Blue")
+                element.style.borderColor = "#0000FF";
+            else if(x=="White")
+                element.style.borderColor = "#FFFFFF";
+
+            var y = document.getElementById("y").value
+            if(y=="Red")
+                element.style.backgroundColor = "#FF0000";
+            else if(y=="Green")
+                element.style.backgroundColor = "#008000";
+            else if(y=="Blue")
+                element.style.backgroundColor = "#0000FF";
+            else if(y=="White")
+                element.style.backgroundColor = "#FFFFFF";
+        }
+        </script>
+    </body>
+</html>
